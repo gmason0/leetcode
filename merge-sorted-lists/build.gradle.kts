@@ -2,9 +2,6 @@ plugins {
     id("java")
 }
 
-group = "io.github.gmason0"
-version = "unspecified"
-
 repositories {
     mavenCentral()
 }
