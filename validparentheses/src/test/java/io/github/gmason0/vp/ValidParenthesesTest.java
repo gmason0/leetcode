@@ -1,5 +1,7 @@
 package io.github.gmason0.vp;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
 public class ValidParenthesesTest
@@ -9,7 +11,7 @@ public class ValidParenthesesTest
 	{
 		String input = "()";
 
-		assert(ValidParentheses.isValid(input));
+		assertTrue(ValidParentheses.isValid(input));
 	}
 
 	@Test
@@ -17,7 +19,7 @@ public class ValidParenthesesTest
 	{
 		String input = "()[]{}";
 
-		assert(ValidParentheses.isValid(input));
+		assertTrue(ValidParentheses.isValid(input));
 	}
 
 	@Test
@@ -25,7 +27,7 @@ public class ValidParenthesesTest
 	{
 		String input = "(]";
 
-		assert(!ValidParentheses.isValid(input));
+		assertFalse(ValidParentheses.isValid(input));
 	}
 
 	@Test
@@ -33,7 +35,7 @@ public class ValidParenthesesTest
 	{
 		String input = "([])";
 
-		assert(ValidParentheses.isValid(input));
+		assertTrue(ValidParentheses.isValid(input));
 	}
 
 	@Test
@@ -41,6 +43,6 @@ public class ValidParenthesesTest
 	{
 		String input = "([)]";
 
-		assert(!ValidParentheses.isValid(input));
+		assertFalse(ValidParentheses.isValid(input));
 	}
 }

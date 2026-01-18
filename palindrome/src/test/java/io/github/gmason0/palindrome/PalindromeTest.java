@@ -1,5 +1,7 @@
 package io.github.gmason0.palindrome;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
 public class PalindromeTest
@@ -10,7 +12,7 @@ public class PalindromeTest
 	{
 		int input = 121;
 
-		assert(Palindrome.isPalindrome(input));
+		assertTrue(Palindrome.isPalindrome(input));
 	}
 
 	@Test
@@ -18,7 +20,7 @@ public class PalindromeTest
 	{
 		int input = -121;
 
-		assert(!Palindrome.isPalindrome(input));
+		assertFalse(Palindrome.isPalindrome(input));
 	}
 
 	@Test
@@ -26,6 +28,6 @@ public class PalindromeTest
 	{
 		int input = 10;
 
-		assert(!Palindrome.isPalindrome(input));
+		assertFalse(Palindrome.isPalindrome(input));
 	}
 }
